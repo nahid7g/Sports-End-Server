@@ -18,7 +18,7 @@ async function run()  {
 		const productCollection =client.db("SportsEnd").collection("product");
 		app.get("/products",async(req,res) => {
 			const query = {};
-			const cursor = productCollection.find(query).limit(5);
+			const cursor = productCollection.find(query).limit(6);
 			const products = await cursor.toArray();
 			res.send(products)
 		});
